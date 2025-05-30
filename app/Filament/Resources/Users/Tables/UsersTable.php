@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Users\Tables;
 
 use App\Filament\Resources\Users\Resources\UserItems\UserItemResource;
 use App\Filament\Resources\Users\UserResource;
+use App\Models\UserItem;
 use Filament\Actions\Action;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
@@ -41,9 +42,8 @@ class UsersTable
                 Action::make('userItems')
                     ->label('Items')
                     ->icon('heroicon-o-rectangle-stack')
-                    ->url(fn ($record) => UserResource::getUrl('userItems',[
+                    ->url(fn ($record) => UserItemResource::getUrl('index',[
                         'user' => $record,
-                        'record' => $record->id,
                     ])),
             ])
             ->bulkActions([
