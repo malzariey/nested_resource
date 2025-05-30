@@ -12,13 +12,13 @@ use Filament\Tables\Table;
 
 class ManageUserItems extends ManageRelatedRecords
 {
-    protected static string $resource = UserItemResource::class;
+    protected static string $resource = UserResource::class;
 
     protected static string $relationship = 'userItems';
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
-    protected static ?string $relatedResource = UserResource::class;
+    protected static ?string $relatedResource = UserItemResource::class;
 
     public function table(Table $table): Table
     {

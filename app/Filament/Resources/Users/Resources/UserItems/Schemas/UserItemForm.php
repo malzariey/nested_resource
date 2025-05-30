@@ -11,9 +11,6 @@ class UserItemForm
     {
         return $schema
             ->components([
-                TextInput::make('user_id')
-                    ->required()
-                    ->numeric(),
                 TextInput::make('name')
                     ->required(),
             ]);

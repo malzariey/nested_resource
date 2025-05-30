@@ -45,7 +45,6 @@ class UserItemResource extends Resource
         return [
             'create' => CreateUserItem::route('/create'),
             'edit' => EditUserItem::route('/{record}/edit'),
-            'index' => ManageUserItems::route('/'),
         ];
     }
 }

@@ -42,8 +42,8 @@ class UsersTable
                 Action::make('userItems')
                     ->label('Items')
                     ->icon('heroicon-o-rectangle-stack')
-                    ->url(fn ($record) => UserItemResource::getUrl('index',[
-                        'user' => $record,
+                    ->url(fn ($record) => UserResource::getUrl('userItems',[
+                        'record' => $record,
                     ])),
             ])
             ->bulkActions([
